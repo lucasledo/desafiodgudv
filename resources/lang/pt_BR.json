@@ -1,0 +1,19 @@
+{
+    "Login" :"Login",
+    "Password":"Senha",
+    "Email Address":"Email",
+    "Remember Me":"Lembrar",
+    "Forgot Your Password?":"Esqueci a senha",
+    "Register":"Registrar",
+    "Reset Password":"Resetar Senha",
+    "Send Password Reset Link":"Enviar link para redefinição de senha",
+    "Name":"Nome",
+    "Confirm Password":"Confirmar Senha",
+    "Please confirm your password before continuing.":"Por favor confirme sua senha antes de continuar",
+    "Verify Your Email Address":"Verificar seu endereço de email",
+    "A fresh verification link has been sent to your email address.":"Um novo link de verificação foi enviado para seu endereço de e-mail.",
+    "click here to request another":"clique aqui para solicitar outro",
+    "Before proceeding, please check your email for a verification link.":"Antes de prosseguir, verifique seu e-mail para obter um link de verificação.",
+    "If you did not receive the email":"Se você não recebeu o e-mail",
+    "Logout":"Sair"
+}
