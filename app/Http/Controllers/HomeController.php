@@ -24,9 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $tasks          = Task::where('user_id', auth()->user()->id)->count();
         $tasksDone      = Task::where('status', 1)->where('user_id', auth()->user()->id)->count();
         $tasksNotDone   = Task::where('status', 0)->where('user_id', auth()->user()->id)->count();
 
-        return view('home', compact('tasksDone', 'tasksNotDone'));
+        return view('home', compact('tasksDone', 'tasksNotDone', 'tasks'));
     }
 }
