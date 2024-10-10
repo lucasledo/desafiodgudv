@@ -23,7 +23,8 @@ class UpdateTaskRequest extends FormRequest
     {
         return [
             'title'         => 'required_without:status|max:255',
-            'description'   => 'required_without:status'
+            'description'   => 'required_without:status',
+            'done'          => 'nullable'
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use App\Models\Task;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
@@ -12,9 +13,15 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::where('user_id', auth()->user()->id)->get();
+        $tasks = Task::where('user_id', auth()->user()->id);
+
+        if($request->status == 1 || $request->status === "0"){
+            $tasks = $tasks->where('status', $request->status);
+        }
+
+        $tasks = $tasks->get();
 
         return view('task.index', compact('tasks'));
     }
@@ -84,7 +91,7 @@ class TaskController extends Controller
 
             $data               = $request->all();
 
-            if($request->status == 0){
+            if($request->status === 'false'){
                 $data['status']    = 1;
                 $data['done_date'] = now();
             }else{

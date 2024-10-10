@@ -8,7 +8,11 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
                         {{ __('Tasks') }}
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#addTask" class="btn btn-primary">{{ __('New Task') }}</button>
+                        <div>
+                            <a href="{{route('tasks.index') . '?status=1'}}" type="button" class="btn btn-success">{{ __('Tasks Done')}}</a>
+                            <a href="{{route('tasks.index') . '?status=0'}}" type="button" class="btn btn-warning">{{ __('Tasks Not Done')}}</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#addTask" class="btn btn-primary">{{ __('New Task') }}</button>
+                        </div>
                     </div>
                 </div>
 
