@@ -23,7 +23,12 @@ docker compose -f deploy/docker-compose.yml --env-file ./.env up --build
 docker exec -t laravelapp php artisan migrate
 ```
 
-3. **Test**
+3. **Test Unitário**
 ```
 docker exec -t laravelapp php artisan test
+```
+
+4. **Test Frontend**
+```
+Para acessar o front, utilize o seguinte link: http://localhost:8080
 ```
